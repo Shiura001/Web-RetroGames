@@ -1,0 +1,414 @@
+@font-face{
+    /*Cambiamos la fuente principal*/
+    font-family: 'PressStart2P';
+    src: url('Vistas/PressStart2P.ttf') format('truetype');
+    
+}
+
+
+.titulo{
+  
+  text-align: center;
+  text-indent: -px;
+  background-color: rgb(255, 0, 0);
+  padding: 14px;
+  position: relative;
+  display: flex; align-items: center; gap: 100px;
+  
+  
+  
+  
+
+}
+
+.welcome{
+  color: #be7500;
+}
+
+/*Configuramos el fondo del body*/
+body{
+    font-family: 'PressStart2P';
+    width: 100%;
+    background-color: black;
+    
+}
+/*Agregamos un efecto para que el fondo se vea con una capa oscura*/
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imagenes/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+/*Fondo negro*/
+body::after{
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+}
+
+
+
+/*Configuramos la barra de navegación*/
+
+header {
+    background-image: url("imagenes/nav.png");
+    background-position: -1px 15px; 
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    border: 5px solid rgb(21, 0, 138); 
+    
+
+  }
+
+
+
+
+
+/* Barra menu principal // barra de navegación*/
+
+.menu{
+    text-align: center;
+}
+header .menu nav ul li #subcategoria {
+  display: none;
+  position: absolute;
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
+}
+
+header .menu nav ul li:hover > #subcategoria {
+  display: block;
+}
+header .menu nav ul li #subcategoria li {
+  background-color: #be7500;
+  margin-left: 0;
+  padding-right: 51px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+header .menu nav ul li #subcategoria li a {
+  font-size: 20px;
+  background-color: transparent;
+}
+
+header .menu nav ul li #subcategoria li:hover {
+  background-color: aquamarine;
+}
+
+  /*Centramos el texto */
+  nav {
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    
+  }
+  
+  /*Alineamos el contenido de la lista */
+  nav ul li {
+    list-style: none;
+    float: left;
+    font-size: 16px;
+    margin-left: 154px;
+    padding: 20px 0;
+    position: relative;
+    
+  }
+  nav ul li a {
+    display: block;
+    padding: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+
+    
+  }
+  
+  nav ul li a:hover {
+    background: #eca023;
+    
+  }
+
+/*Reponsive*/
+
+  @media (max-width: 1500px) {
+    nav ul li {
+      list-style: none;
+      float: left;
+      font-size: 16px;
+      margin-left: 30px;
+      padding: 20px 0;
+      position: relative;
+      
+    }
+    header {
+      background-image: url("imagenes/nav.png");
+      background-position: -1px 15px; 
+      width: 100%;
+      height: 36%;
+      position: fixed;
+      z-index: 100;
+      border: 5px solid rgb(21, 0, 138); 
+      body{
+        font-family: 'PressStart2P';
+        width: 40%;
+        background-color: black;
+      }
+      
+  
+    }  
+    
+  
+    
+  
+      
+   
+  }  
+
+
+
+
+
+
+  /*Imagenes y contenido*/
+
+.imgr{
+    display: flex;
+    justify-content: right;
+}
+
+.imgl{
+    display: flex;
+}
+
+/*Usamos esta clase para ubicar las imagenes de los juegos y su descripción*/
+.imagen{
+    top: 290px;
+    left: 300px;
+    position: relative;
+    border-style: groove;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    width: 15%;
+    height: 30%;
+    
+}
+
+
+.imagen2{
+  left: 1280px;
+  top: -200px;
+  position: relative;
+  border-style: groove;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  width: 15%;
+  height: 30%;
+}
+
+.imagen3{
+  left: 300px;
+  top: -400px;
+  position: relative;
+  border-style: groove;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  width: 15%;
+  height: 30%;
+
+}
+
+
+.imagen4{
+  left: 1280px;
+  top: -1200px;
+  position: relative;
+  border-style: groove;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  width: 15%;
+  height: 30%;
+}
+
+/*Cofiguramos el texto de la imagen*/
+#color_titulo{
+  color: rgb(0, 0, 0);
+  background-color: #eca023;
+
+}
+/*Cofiguramos la tabla para los juegos y para poder descargarlos*/
+.Tabla_contenedor{
+top: 300px;
+position: absolute;
+color: #ffffff;
+
+}
+
+.table,th{
+  border: 1px solid white;
+  padding: 10px;
+  width: 100%px;
+  background-color: #be7500;
+  font-size: 20px;
+  
+  
+}
+.table,td{
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 17px;
+}
+
+/*Cofiguramos campos de texto para enviar ideas o juegos*/
+.input1{
+  background-color: blue;
+  top: 490px;
+  left: 50%;
+  position: absolute;
+  padding: 100px;
+  border-radius: 30px;
+  justify-content: center;
+  display: flexbox;
+  align-items: center;
+  height: 50vh;
+  border-color: blue;
+  transform: translate(-50%);
+  
+}
+
+#input-texto{
+  border-style: groove;
+  border-radius: 10px;
+  border-style: groove;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+}
+
+.boton-enviar{
+  text-align: center;
+
+}
+
+#textocolor{
+  border-style: groove;
+  border-radius: 10px;
+  border-style: groove;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  transition: 0.2s;
+}
+
+#textocolor:hover{
+  transform: scale(1.1);
+
+  
+}
+/*Cofiguramos un video*/
+.video_contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+  
+}
+
+/* Para texto en la pagina de HISTORIA*/
+
+#textohistory1{
+  color: white;
+  top: 1100px;
+  background-color: blue;
+  position: absolute;
+  padding: 50px;
+  border-radius: 30px;
+  
+}
+/*Para imagenes en la pagina de HISTORIA*/
+
+
+
+#container001{
+  display: flex;
+  top: 1400px;
+  position: absolute;
+  margin: 0px;
+
+}
+#history14{
+  background-color: rgb(0, 112, 168);
+  color: white;
+  padding: 30px;
+  border-radius: 30px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+
+  
+  
+
+}
+#imagenvs{
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#history14:hover{
+  transform: scale(1.03);
+}
+
+/*Nosotros*/
+
+#container002{
+  text-align: center;
+  display: flex;
+  top: 300px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+#texton{
+  color: white;
+  background-color: rgb(0, 3, 168);
+  padding: 30px;
+  border-radius: 30px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 21px;
+}
+
+#logo{
+  border-radius: 50%;
+}

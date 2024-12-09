@@ -1,0 +1,415 @@
+@font-face{
+    /*Cambiamos la fuente principal*/
+    font-family: 'PressStart2P';
+    src: url('Vistas/PressStart2P.ttf') format('truetype');
+    
+}
+
+
+
+  
+
+
+
+
+
+
+
+/*Configuramos el fondo del body*/
+body{
+    font-family: 'PressStart2P';
+    width: 100%;
+    background-color: black;
+    
+}
+/*Agregamos un efecto para que el fondo se vea con una capa oscura*/
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imagenes/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+/*Fondo negro*/
+body::after{
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 20;
+}
+
+
+
+/*Configuramos la barra de navegación*/
+
+.header{
+  position: fixed;
+  background-color: #ff2b2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 25%;
+  z-index: 1000;
+  width: max-content;
+  
+
+}
+/*Mensaje de usuario activo*/
+
+.header .welcome{
+  text-align: left;
+  position: absolute;
+  left: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+
+
+
+.header .logo{
+  cursor: pointer;
+}
+
+.header .logo img{
+  height: 70px;
+  width: auto;
+  transition: all 0.3s;
+  border-radius: 30%;
+}
+
+
+
+.header .logo img:hover{
+  transform: scale(1.2);
+
+}
+
+.header .nav-links{
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header .nav-links li{
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+
+
+
+
+.header .nav-links li:hover{
+  color: #be7500;
+  transform: scale(1.1);
+  
+}
+.header .btn button{
+  font-weight: 700;
+  color: black;
+  padding: 9px 25px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+  background-color: #4900be;
+  transform: scale(1.1);
+}
+
+
+
+/*config menu vertical*/
+
+
+
+
+
+.header .nav-links > li > a{
+	display: block;
+	font-size: 700;
+	text-decoration: none;
+  color: black;
+  
+}
+
+.header .nav-links .menu-vertical {
+  position: absolute;
+  display: none;
+  background-color: #000000;
+  width: 200px;
+  left: -10px;
+  text-align: center;
+  padding: 15px 15px 15px 20px;
+  opacity: 100%;
+  
+ 
+}
+
+.header .nav-links .menu-vertical > li > a{
+	
+	color: #dcff14;
+	text-decoration: none;
+  
+}
+
+
+
+.header .nav-links li:hover .menu-vertical{
+	display: block;
+}
+
+
+
+
+
+  /*Imagenes y contenido*/
+
+.imgr{
+    display: flex;
+    justify-content: right;
+}
+
+.imgl{
+    display: flex;
+}
+
+/*Usamos esta clase para ubicar las imagenes de los juegos y su descripción*/
+.imagen{
+    top: 290px;
+    left: 300px;
+    position: relative;
+    border-style: groove;
+    border-radius: 10px;
+    box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+    color: #fff;
+    background-color: rgb(0, 0, 0);
+    width: 15%;
+    height: 30%;
+    
+}
+
+
+.imagen2{
+  left: 1280px;
+  top: -200px;
+  position: relative;
+  border-style: groove;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  width: 15%;
+  height: 30%;
+}
+
+.imagen3{
+  left: 300px;
+  top: -400px;
+  position: relative;
+  border-style: groove;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  width: 15%;
+  height: 30%;
+
+}
+
+
+.imagen4{
+  left: 1280px;
+  top: -1200px;
+  position: relative;
+  border-style: groove;
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  width: 15%;
+  height: 30%;
+}
+
+/*Cofiguramos el texto de la imagen*/
+#color_titulo{
+  color: rgb(0, 0, 0);
+  background-color: #eca023;
+
+}
+/*Cofiguramos la tabla para los juegos y para poder descargarlos*/
+.Tabla_contenedor{
+top: 300px;
+position: absolute;
+color: #ffffff;
+
+}
+
+.table,th{
+  border: 1px solid white;
+  padding: 10px;
+  width: 100%px;
+  background-color: #be7500;
+  font-size: 20px;
+  
+  
+}
+.table,td{
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 17px;
+}
+
+/*Cofiguramos campos de texto para logearse*/
+
+
+.input1 {
+  background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px; /* Ajusta el tamaño del cuadro */
+  height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+#input-texto{
+  border-style: groove;
+  border-radius: 10px;
+  border-style: groove;
+  box-shadow: 7px 7px 7px rgb(200, 205, 224), 10px 10px 10px rgb(216, 208, 255);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+}
+
+.boton-enviar{
+  text-align: center;
+
+}
+
+#textocolor{
+  border-style: groove;
+  border-radius: 10px;
+  border-style: groove;
+  box-shadow: 7px 7px 7px rgb(0, 24, 104), 10px 10px 10px rgb(18, 0, 97);
+  color: #fff;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  transition: 0.2s;
+}
+
+#textocolor:hover{
+  transform: scale(1.1);
+
+  
+}
+/*Cofiguramos un video*/
+.video_contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+  
+}
+
+/* Para texto en la pagina de HISTORIA*/
+
+#textohistory1{
+  color: white;
+  top: 1100px;
+  background-color: blue;
+  position: absolute;
+  padding: 50px;
+  border-radius: 30px;
+  
+}
+/*Para imagenes en la pagina de HISTORIA*/
+
+
+
+#container001{
+  display: flex;
+  top: 1400px;
+  position: absolute;
+  margin: 0px;
+
+}
+#history14{
+  background-color: rgb(0, 112, 168);
+  color: white;
+  padding: 30px;
+  border-radius: 30px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+
+  
+  
+
+}
+#imagenvs{
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#history14:hover{
+  transform: scale(1.03);
+}
+
+/*Nosotros*/
+
+#container002{
+  text-align: center;
+  display: flex;
+  top: 300px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+#texton{
+  color: white;
+  background-color: rgb(0, 3, 168);
+  padding: 30px;
+  border-radius: 30px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 21px;
+}
+
+#logo{
+  border-radius: 50%;
+}
+
